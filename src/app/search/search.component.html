@@ -1,0 +1,13 @@
+<div class="my-10">
+    <form class="flex flex-row justify-center" (ngSubmit)="onSubmit(searchform)" #searchform="ngForm">
+      <input type="text" id="search" name="search" ngModel
+      placeholder="
+      Search for products..." 
+      class="placeholder:italic placeholder:text-slate-400 border rounded-full py-4 px-6 w-96 shadow-md">
+      <button type="submit" 
+      class="bg-sky-500 hover:bg-sky-700 rounded-full py-5 px-5 text-white mx-3 shadow-md">
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+      </svg></button>
+    </form>
+  </div>

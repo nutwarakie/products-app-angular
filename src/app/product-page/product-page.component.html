@@ -1,0 +1,70 @@
+<div class="grid grid-cols-2 gap-4 container mx-auto my-40">
+
+<!--Image-->
+<img class="h-auto max-w-full rounded-lg mx-auto" [src]="image" alt="image description">
+
+
+    <!--Details-->
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow mx-auto pt-8">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{title}}</h5>
+    <p class="mb-3 font-normal text-gray-500 ">{{description}}</p>
+    <h5 class="mb-2 text-2xl  tracking-tight text-gray-700">${{price}}</h5>
+    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-blue-300 mt-4">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 21">
+            <path d="M15 14H7.78l-.5-2H16a1 1 0 0 0 .962-.726l.473-1.655A2.968 2.968 0 0 1 16 10a3 3 0 0 1-3-3 3 3 0 0 1-3-3 2.97 2.97 0 0 1 .184-1H4.77L4.175.745A1 1 0 0 0 3.208 0H1a1 1 0 0 0 0 2h1.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 10 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3Zm-8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+            <path d="M19 3h-2V1a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V5h2a1 1 0 1 0 0-2Z"/>
+          </svg>
+          ADD TO CART
+    </a>
+</div>
+</div>
+
+<!-- <div class="mt-28">
+    <h1 class="text-[#717171] text-4xl font-bold text-center">
+      Product
+    </h1>
+  </div>
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-xl container mx-auto">
+    <table class="w-full text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-500 uppercase bg-gray-100">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   Description
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Image
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-16 py-3">
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap">
+                    {{product.title}}
+                </th>
+                <td class="px-6 py-4">
+                    {{product.description}}
+                </td>
+                <td class="px-6 py-4">
+                    <img [src]="product.images[0]" class="max-w-80 max-h-80">
+                    
+                </td>
+                <td class="px-6 py-4">
+                    ${{product.price}}
+                </td>
+               
+            </tr>   
+        </tbody>
+    </table>
+  </div>
+   -->

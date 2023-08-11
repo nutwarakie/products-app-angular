@@ -1,0 +1,59 @@
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-xl container mx-auto">
+    <table class="w-full text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-500 uppercase bg-gray-100">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   Description
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Image
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-16 py-3">
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b"
+             *ngFor="let product of products | paginate:{
+                itemsPerPage:tableSize,
+                currentPage:page,
+                totalItems:count} ; let i =index">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap">
+                    {{product.title | uppercase}}
+                </th>
+                <td class="px-6 py-4">
+                    {{product.description}}
+                </td>
+                <td class="px-6 py-4">
+                    <img [src]="product.images[0]" class="object-contain h-48 w-96">
+                    
+                </td>
+                <td class="px-6 py-4">
+                    ${{product.price}}
+                </td>
+                <td>
+                    <button type="submit" 
+      class="bg-sky-500 hover:bg-sky-700 rounded-lg py-2.5 px-6 text-white mx-3 shadow-md" 
+      [routerLink]="['/product',product.id]"
+      >Details</button>
+                </td>
+            </tr>   
+        </tbody>
+    </table>
+  </div>
+  <h1 class="text-gray-400 text-center my-6" *ngIf="noResult">No Result Found</h1>
+  <div>
+    <pagination-controls class="flex justify-center my-6"
+    previousLabel="Prev" 
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)">   
+    </pagination-controls>
+</div>

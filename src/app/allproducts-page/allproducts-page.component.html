@@ -1,0 +1,7 @@
+<div class="mt-28">
+    <h1 class="text-[#717171] text-4xl font-bold text-center">
+      All Products
+    </h1>
+  </div>
+<app-search (SearchEvent)=" onFormSearchSubmit($event)"></app-search>
+<app-products-list [products]="productfromSearch" [noResult]="noresult"></app-products-list>
